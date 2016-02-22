@@ -1,6 +1,6 @@
 /*
 
-  Read the input from a switch, then make the LED blink once.
+  Read the input from a switch, then make the LED blink twice.
 
 */ 
 
@@ -26,6 +26,10 @@ void loop() {
    delay(1000);
    digitalWrite(LEDPin,LOW);
    delay(1000);
+   digitalWrite(LEDPin,HIGH);
+   delay(1000);
+   digitalWrite(LEDPin,LOW);
+   delay(1000);   
   }
   delay(100);
 }

@@ -1,6 +1,6 @@
 /*
 
-  Output the temperature to the serial port
+  Output the temperature to the serial console
 
 */ 
 

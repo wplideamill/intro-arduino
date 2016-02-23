@@ -21,15 +21,33 @@ void setup() {
 
 void loop() {
 
+// as long as we haven't gotten the signal to stop, run the first section
+
   if (running)
   {
     
-    int currentTime = millis();
-    if (currentTime >= blinkTimer + 1000)
+    // Check our timers and counter
+    
+    int currentTime = millis(); // establish current time 
+    
+    if (currentTime >= blinkTimer + 500) // if it's been more than 0.5 seconds since the blink timer reset
     {
-      ledOn = !ledOn;
-      blinkTimer = currentTime;
+      ledOn = !ledOn; // change the state of the LED
+      blinkTimer = currentTime;  // reset the blink timer
     }
+
+    if (currentTime >= buttonTimer + 1000)  // if it's been more than 1 second since the first button press
+    {
+      buttonClicks = 0;  // reset the button counter
+    }    
+    
+    if (buttonClicks == 0) // if we haven't counted any button clicks yet
+    {
+      buttonTimer = currentTime;  // reset the button timer
+    }
+    
+  
+    // turn the LED on or off depending on the variable ledOn
   
     if (ledOn)
     {
@@ -39,27 +57,38 @@ void loop() {
     {
       digitalWrite(LEDPin,LOW);
     }
-    
-    if (buttonClicks == 0)
-    {
-      buttonTimer = millis();
-    }
+  
+    // check for button presses and count them
   
     if (digitalRead(switchPin,LOW)
     {
       buttonClicks = butonClicks + 1;
     }
     
+    // check to see if it's time to turn off the blinker
+    
     if (buttonClicks >= 4)
     {
       running=false;
+      for (int i=0; i < 4; i++){
+        digitalWrite(LEDPin,HIGH);
+        delay(100);
+        digitalWrite(LEDPin,LOW);
+        delay(100);
+      }
     }
     
-    if (currentTime >= buttonTimer + 1000)
-    {
-      buttonTimer = currentTime;
-    }
-
+    delay(100);  // delay to prevent over-counting clicks.
+    
+  }
+  
+// Once we've gotten the 'stop' signal, keep the LED off  
+  
+  if (!running)
+  {
+    digitalWrite(LEDPin,LOW);
+  }
+  
 }
 
 

@@ -59,10 +59,11 @@ void loop() {
     }
   
     // check for button presses and count them
-  
-    if (digitalRead(switchPin,LOW)
+    
+    int switch_value = digitalRead(switchPin); 
+    if(switch_value==LOW) 
     {
-      buttonClicks = butonClicks + 1;
+      buttonClicks = buttonClicks + 1;
     }
     
     // check to see if it's time to turn off the blinker

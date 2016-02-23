@@ -2,7 +2,7 @@
 
 Connecting the Arduino to external components allows it to interact with the rest of the world.
 
-If you connect the LED on your breadboard to pin 13 on the Arduino, you can use the code from exercise 1 to test it.
+If you connect the LED on your breadboard to pin 13 on the Arduino, you can use the code from exercise 1 to test it and make sure your connections are correct. You can also plug your LED into a different pin; just remember to update and upload your code to the Arduino.
 
 #### Extra challenge
 

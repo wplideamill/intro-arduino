@@ -1,6 +1,10 @@
 /*
 
   Blink the LED until the button is pressed 4 times in a second.
+  
+  Note: this solution will work, but it has a flaw.
+  1. What's the flaw?
+  2. How would you improve it?
 
 */ 
 
@@ -79,7 +83,7 @@ void loop() {
       }
     }
     
-    delay(100);  // delay to prevent over-counting clicks.
+    delay(100);  
     
   }
   

@@ -10,3 +10,7 @@ You can follow along with the slides during the presentation; they're also handy
 The Arduino language reference lists all of the commands you can use with the Arduino - dig into it if you want to try more advanced coding techniques with today's projects. 
 
 The folders above contain code examples for each of the projects we'll be working on. Try working out how to write the code on your own first, and use the provided code examples only if you're stuck.
+
+---
+
+[Credits](https://github.com/dkappo/intro-arduino/wiki)

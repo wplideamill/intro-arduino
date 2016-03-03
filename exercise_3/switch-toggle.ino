@@ -8,7 +8,7 @@
 int switchPin = 7;
 int redPin = 13;
 int greenPin = 11;
-int whichPin = 1; // 1 = red pin on, -1 = green pin on
+boolean whichPin = true; // true = red pin on, false = green pin on
 
 void setup() {
 
@@ -23,16 +23,16 @@ void loop() {
 
   int switch_value = digitalRead(switchPin); // read the switch value
   
-  // if the switch gets pressed, change the value of whichPin from 1 to -1 (or vice versa)
+  // if the switch gets pressed, change the value of whichPin from true to false (or vice versa)
   
   if(switch_value==LOW)
   {
-    whichPin = -whichPin;  
+    whichPin = !whichPin;  
   }
   
   // use the value of whichPin to decide which light gets turned on
   
-  if(whichPin>0)
+  if(whichPin)
   {
     digitalWrite(redPin,HIGH);
     digitalWrite(greenPin,LOW);

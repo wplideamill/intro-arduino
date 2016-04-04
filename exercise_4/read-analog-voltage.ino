@@ -17,7 +17,7 @@ void loop() {
 
     // put your main code here, to run repeatedly:
     int reading = analogRead(A0);
-    float voltage = reading*(5.0/1024.0);
+    float voltage = reading*(5.0/1023.0);
 
     Serial.println(voltage);
   

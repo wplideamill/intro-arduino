@@ -15,7 +15,7 @@ void setup() {
 void loop() {
 
     int reading = analogRead(A0);
-    float voltage = reading*(5.0/1024.0);
+    float voltage = reading*(5.0/1023.0);
     float temperature = (voltage - 0.4)/0.0195;
 
     if (temperature > 27.0)

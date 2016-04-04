@@ -8,3 +8,4 @@ Reading data from sensors (like the temperature sensors we're using today) allow
 3. Light up the red LED if the temperature is above 27C, light up the green LED if the temperature is below 27C. (Solution: temperature-high-low.ino)
 4. Light up the red LED if the temperature is rising, light up the green LED if the temperature is falling.  (Solution: temperature-rising-falling.ino)
 
+ 

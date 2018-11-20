@@ -2,7 +2,7 @@
 
 Files and links for the *Introduction to Arduino* workshop at Winnipeg Public Library
 
-[Slides for this presentation](https://docs.google.com/presentation/d/1YHl-TrTbHp6pmhTUYHdbSzjinsbSHiaBcD-t3p3SLC0/edit?usp=sharing)  
+[Slides for this presentation](https://docs.google.com/presentation/d/1BhBydB7por-fpM-JIFoRtOGkDF6zFMZflTYHa8ChQiI/edit?usp=sharing)  
 [Arduino language reference](https://www.arduino.cc/en/Reference/HomePage)
 
 You can follow along with the slides during the presentation; they're also handy to refer back to when you're working on the projects. 
